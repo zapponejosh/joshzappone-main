@@ -4,15 +4,23 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint \"**/*.{js,jsx}\" --quiet"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.12.1",
+    "@chakra-ui/icons": "^1.0.3",
+    "@chakra-ui/react": "^1.1.6",
+    "@chakra-ui/theme-tools": "^1.0.3",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
     "@sanity/block-content-to-react": "2.0.7",
     "@sanity/client": "1.149.2",
     "@sanity/image-url": "0.140.17",
     "autoprefixer": "^10.2.3",
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
+    "framer-motion": "^3.2.2-rc.1",
     "next": "latest",
     "postcss": "^8.2.4",
     "react": "^16.13.0",
@@ -20,7 +28,16 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
     "tailwindcss": "^2.0.2"
   },
   "license": "MIT"

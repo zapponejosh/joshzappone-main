@@ -1,7 +1,7 @@
-import React from "react";
-import { imageBuilder } from '../lib/sanity'
+import React from 'react';
+import { imageBuilder } from '../lib/sanity';
 
-// const builder = imageUrlBuilder(client);
+// image in posts
 
 function Figure({ node }) {
   const { alt, caption, asset } = node;
@@ -11,7 +11,7 @@ function Figure({ node }) {
   return (
     <figure>
       <img
-        src={imageBuilder.image(asset).auto("format").width(500).url()}
+        src={imageBuilder.image(asset).auto('format').width(500).url()}
         alt={alt}
       />
       {caption && (
@@ -26,6 +26,5 @@ function Figure({ node }) {
     </figure>
   );
 }
-
 
 export default Figure;
