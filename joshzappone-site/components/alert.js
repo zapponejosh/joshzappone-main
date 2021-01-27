@@ -1,9 +1,13 @@
 import Container from './container';
 // import cn from 'classnames'
 import { EXAMPLE_PATH } from '../lib/constants';
-import { Alert as A, Box, AlertDescription } from '@chakra-ui/react';
+import { Alert as A, Box, AlertDescription, CloseButton } from '@chakra-ui/react';
 
 export default function Alert({ preview }) {
+  const handleClose = () => {
+    document.getElementById('alert').style.display = 'none';
+  };
+
   return (
     <div
     // example usage of conditional classnames using classnames package
@@ -12,7 +16,7 @@ export default function Alert({ preview }) {
     //   'bg-accent-1 border-accent-2': !preview,
     // })}
     >
-      <Box bgColor="lightgray">
+      <Box bgColor="lightgray" id="alert">
         <Container>
           <A status="info" variant="left-accent">
             {preview ? (
@@ -21,16 +25,22 @@ export default function Alert({ preview }) {
                 exit preview mode.
               </AlertDescription>
             ) : (
-              <>
-                The source code for this blog is{' '}
+              <A>
+                The source code for this blog is&nbsp;
                 <a
                   href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
                 >
                   available on GitHub
                 </a>
                 .
-              </>
+              </A>
             )}
+            <CloseButton
+              position="absolute"
+              right="8px"
+              top="8px"
+              onClick={handleClose}
+            />
           </A>
         </Container>
       </Box>

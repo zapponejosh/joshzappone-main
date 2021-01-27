@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Image } from '@chakra-ui/react';
 import { imageBuilder } from '../lib/sanity';
 
 export default function CoverImage({ title, url, slug }) {

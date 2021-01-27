@@ -2,6 +2,7 @@ import Avatar from '../components/avatar';
 import Date from '../components/date';
 import CoverImage from './cover-image';
 import Link from 'next/link';
+import { Box } from '@chakra-ui/react';
 
 export default function PostPreview({
   title,
@@ -12,7 +13,7 @@ export default function PostPreview({
   slug,
 }) {
   return (
-    <div>
+    <Box w="">
       <div>
         <CoverImage slug={slug} title={title} url={coverImage} />
       </div>
@@ -26,6 +27,6 @@ export default function PostPreview({
       </div>
       <p>{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
-    </div>
+    </Box>
   );
 }
