@@ -49,7 +49,7 @@ https://github.com/chakra-ui/chakra-ui/issues/3124
   /* #nav-lg {
     display: none;
   } */
-  #menu-button-5 {
+  button[id^='menu-button-'] {
     display: none;
   }
 }
