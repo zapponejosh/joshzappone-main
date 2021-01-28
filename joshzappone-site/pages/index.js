@@ -12,7 +12,6 @@ import { Box, Flex, Image, Spacer } from '@chakra-ui/react';
 export default function Index({ queryRes }) {
   const data = queryRes[0];
 
-  console.log(data);
   return (
     <>
       <Layout>
@@ -36,10 +35,12 @@ export default function Index({ queryRes }) {
                 .width(300)
                 .height(300)
                 .url()}
+              alt={data.image.alt}
               borderRadius="full"
               width="310px"
               height="310px"
               m="30px"
+              mt="0"
               p="15px"
               filter="drop-shadow(10px 4px 4px #d964176c) drop-shadow(-11px -2px 4px #6B46C16c)"
               _hover={{

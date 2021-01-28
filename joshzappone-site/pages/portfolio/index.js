@@ -10,7 +10,6 @@ import { Flex, Heading, SimpleGrid } from '@chakra-ui/react';
 
 export default function Index({ allProjects, preview }) {
   const data = allProjects[0];
-  console.log(data);
 
   const projectTiles = data.projects.map((p, idx) => {
     return (

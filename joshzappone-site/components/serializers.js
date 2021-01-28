@@ -42,6 +42,7 @@ const serializers = {
   marks: {
     internalLink: ({ children, mark }) => (
       <Box
+        as="span"
         className="internal-a"
         d="inline"
         p="2px"
@@ -58,6 +59,7 @@ const serializers = {
     link: ({ children, mark }) =>
       mark.blank ? (
         <Box
+          as="span"
           className="external-a"
           d="inline"
           p="3px"

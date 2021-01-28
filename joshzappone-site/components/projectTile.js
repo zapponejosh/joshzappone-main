@@ -3,7 +3,6 @@ import BlockContent from '@sanity/block-content-to-react';
 import serializers from './serializers';
 
 const ProjectTile = (props) => {
-  console.log(props.repoLinkTitle);
   const stackBadges = props.projectStack.map((p, idx) => (
     <Badge key={idx} borderRadius="full" px="6px" m="3px" colorScheme="pink">
       {p}

@@ -26,13 +26,11 @@ const theme = extendTheme({
       textTransform: 'lowercase',
     },
     content: {
-      // you can also use responsive styles
       fontSize: '1.1rem',
       lineHeight: '140%',
       letterSpacing: '1px',
     },
     excerpt: {
-      // you can also use responsive styles
       fontSize: '0.9rem',
       lineHeight: '120%',
       letterSpacing: '.8px',
