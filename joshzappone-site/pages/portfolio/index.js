@@ -64,5 +64,6 @@ export async function getStaticProps({ preview = false }) {
   const allProjects = await getAllPortfolioData(preview);
   return {
     props: { allProjects, preview },
+    revalidate: 100,
   };
 }
