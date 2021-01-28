@@ -4,9 +4,9 @@ import { imageBuilder } from '../lib/sanity';
 
 export default function CoverImage({ title, url, slug }) {
   const image = (
-    <img
-      width={2000}
-      height={1000}
+    <Image
+      boxShadow="lg"
+      borderRadius="7px"
       alt={`Cover for ${title}`}
       src={imageBuilder.image(url).height(1000).width(2000).url()}
     />

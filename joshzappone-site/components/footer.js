@@ -1,24 +1,26 @@
 import Container from './container';
 import { EXAMPLE_PATH } from '../lib/constants';
+import { Box, Heading } from '@chakra-ui/react';
 
 export default function Footer() {
   return (
-    <footer>
+    <Box
+      bgGradient="linear(to-l, #7928CA6c, #FF00806c)"
+      as="footer"
+      mt="4rem"
+      pt="2rem"
+      pb="1.5rem"
+    >
       <Container>
-        <div>
-          <h3>Statically Generated with Next.js.</h3>
+        <Box textAlign="center">
+          <Heading as="h4" size="sm">
+            Made with 🍕 in Seattle.
+          </Heading>
           <div>
-            <a href="https://nextjs.org/docs/basic-features/pages">
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-            >
-              View on GitHub
-            </a>
+            <p>Copyright © 2020</p>
           </div>
-        </div>
+        </Box>
       </Container>
-    </footer>
+    </Box>
   );
 }

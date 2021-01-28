@@ -13,16 +13,29 @@ const theme = extendTheme({
   textStyles: {
     nav: {
       // you can also use responsive styles
-      fontSize: { base: '1.7rem', md: '2.3rem', lg: '4rem' },
+      fontSize: { base: '1rem', md: '1.8rem', lg: '2rem' },
       fontWeight: 'bold',
       lineHeight: '110%',
       letterSpacing: '-2%',
     },
-    h2: {
-      fontSize: ['36px', '48px'],
+    logo: {
+      fontSize: { base: '1.1rem', md: '1.8rem', lg: '2rem' },
       fontWeight: 'semibold',
       lineHeight: '110%',
-      letterSpacing: '-1%',
+      letterSpacing: { base: '1px', sm: '2px' },
+      textTransform: 'lowercase',
+    },
+    content: {
+      // you can also use responsive styles
+      fontSize: '1.1rem',
+      lineHeight: '140%',
+      letterSpacing: '1px',
+    },
+    excerpt: {
+      // you can also use responsive styles
+      fontSize: '0.9rem',
+      lineHeight: '120%',
+      letterSpacing: '.8px',
     },
   },
 });

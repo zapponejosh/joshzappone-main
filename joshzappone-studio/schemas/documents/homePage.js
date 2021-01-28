@@ -36,13 +36,13 @@ export default {
     {
       name: 'introText',
       title: 'Intro Text',
-      type: 'array',
-      of: [
-        {
-          type: 'block',
-          lists: []
-        }
-      ],
+      type: 'portableText',
+      fieldset: 'introSection'
+    },
+    {
+      name: 'image',
+      title: 'Intro image',
+      type: 'figure',
       fieldset: 'introSection'
     }
   ]

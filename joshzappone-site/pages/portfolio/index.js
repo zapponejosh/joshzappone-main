@@ -1,33 +1,68 @@
-import Container from '../../components/container'
-import MoreStories from '../../components/more-stories'
-import HeroPost from '../../components/hero-post'
-import Intro from '../../components/intro'
-import Layout from '../../components/layout'
-import { getAllPostsForHome } from '../../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
+import Container from '../../components/container';
+import Intro from '../../components/intro';
+import Layout from '../../components/layout';
+import ProjectTile from '../../components/projectTile';
+import { getAllPortfolioData } from '../../lib/api';
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
-export default function Index({ allPosts, preview }) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+import { Flex, Heading, SimpleGrid } from '@chakra-ui/react';
+
+export default function Index({ allProjects, preview }) {
+  const data = allProjects[0];
+  console.log(data);
+
+  const projectTiles = data.projects.map((p, idx) => {
+    return (
+      <ProjectTile
+        key={idx}
+        name={p.projectName}
+        description={p.projectDescription}
+        projectStack={p.projectStack}
+        imageUrl={p.imageUrl}
+        repoLink={p.repoLink || null}
+        deployLink={p.deployLink || null}
+      />
+    );
+  });
+
   return (
     <>
       <Layout preview={preview}>
-        <Head>
-          <title>Portfolio Page</title>
-        </Head>
+        <NextSeo
+          title={data.title}
+          titleTemplate={`${data.title} | Josh Zappone`}
+          description={data.description}
+          // canonical={config.url ? (slug === "/" ? `${config.url}` : `${config.url}/${slug}`) : null}
+          // openGraph={{
+          //   images: { openGraphImages },
+          // }}
+          // noindex={disallowRobots}
+        />
+
+        <Intro title="Projects" />
         <Container>
-          <Intro />
-        <h2>A Portfolio Page</h2>
+          <Heading as="h4" size="md" textAlign="center">
+            {data.description}
+          </Heading>
+          <SimpleGrid
+            mx="auto"
+            py="2rem"
+            maxW="1000px"
+            columns={[1, 2, 3]}
+            spacing="30px"
+          >
+            {projectTiles}
+          </SimpleGrid>
         </Container>
       </Layout>
     </>
-  )
+  );
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allPosts = await getAllPostsForHome(preview)
+  const allProjects = await getAllPortfolioData(preview);
   return {
-    props: { allPosts, preview },
-  }
+    props: { allProjects, preview },
+  };
 }

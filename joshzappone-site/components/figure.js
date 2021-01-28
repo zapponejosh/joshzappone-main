@@ -1,3 +1,4 @@
+import { Image } from '@chakra-ui/react';
 import React from 'react';
 import { imageBuilder } from '../lib/sanity';
 
@@ -10,7 +11,10 @@ function Figure({ node }) {
   }
   return (
     <figure>
-      <img
+      <Image
+        borderRadius="7px"
+        m="10px"
+        boxShadow="lg"
         src={imageBuilder.image(asset).auto('format').width(500).url()}
         alt={alt}
       />

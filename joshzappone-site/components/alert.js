@@ -1,13 +1,8 @@
 import Container from './container';
 // import cn from 'classnames'
-import { EXAMPLE_PATH } from '../lib/constants';
-import { Alert as A, Box, AlertDescription, CloseButton } from '@chakra-ui/react';
+import { Box, Link } from '@chakra-ui/react';
 
 export default function Alert({ preview }) {
-  const handleClose = () => {
-    document.getElementById('alert').style.display = 'none';
-  };
-
   return (
     <div
     // example usage of conditional classnames using classnames package
@@ -16,32 +11,40 @@ export default function Alert({ preview }) {
     //   'bg-accent-1 border-accent-2': !preview,
     // })}
     >
-      <Box bgColor="lightgray" id="alert">
+      <Box bgColor="lightgray" py="1px" textAlign="center">
         <Container>
-          <A status="info" variant="left-accent">
+          <Box fontSize=".8rem">
             {preview ? (
-              <AlertDescription>
+              <Box>
                 This page is a preview. <a href="/api/exit-preview">Click here</a> to
                 exit preview mode.
-              </AlertDescription>
+              </Box>
             ) : (
-              <A>
-                The source code for this blog is&nbsp;
-                <a
-                  href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+              <Box>
+                Created with&nbsp;
+                <Link
+                  isExternal
+                  href="https://nextjs.org/"
+                  rel="noopener noreferrer"
                 >
-                  available on GitHub
-                </a>
+                  Nextjs
+                </Link>
+                &nbsp;and&nbsp;
+                <Link
+                  isExternal
+                  href="https://www.sanity.io/"
+                  rel="noopener noreferrer"
+                >
+                  Sanity
+                </Link>
+                . Deployed on&nbsp;
+                <Link href="https://vercel.com" rel="noopener noreferrer">
+                  Vercel
+                </Link>
                 .
-              </A>
+              </Box>
             )}
-            <CloseButton
-              position="absolute"
-              right="8px"
-              top="8px"
-              onClick={handleClose}
-            />
-          </A>
+          </Box>
         </Container>
       </Box>
     </div>
