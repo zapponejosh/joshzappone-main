@@ -37,9 +37,10 @@ export default function Index({ queryRes }) {
                 .height(300)
                 .url()}
               borderRadius="full"
-              width="300px"
-              height="300px"
-              m="40px"
+              width="310px"
+              height="310px"
+              m="30px"
+              p="15px"
               filter="drop-shadow(10px 4px 4px #d964176c) drop-shadow(-11px -2px 4px #6B46C16c)"
               _hover={{
                 filter:
