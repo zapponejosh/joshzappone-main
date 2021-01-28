@@ -2,17 +2,14 @@ import NextLink from 'next/link';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import {
   Flex,
-  Text,
   Link,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   IconButton,
-  useMediaQuery,
   Box,
 } from '@chakra-ui/react';
-import { useEffect } from 'react';
 
 const mobileMenu = (
   <Menu>
@@ -20,7 +17,7 @@ const mobileMenu = (
       id="nav-sm"
       colorScheme="blue"
       as={IconButton}
-      aria-label="Options"
+      aria-label="Nav"
       icon={<HamburgerIcon />}
       size="sm"
       variant="outline"
@@ -61,8 +58,6 @@ const mobileMenu = (
 );
 
 export default function Header() {
-  let [isMobile] = useMediaQuery('(max-width: 450px)');
-
   return (
     <Flex
       mx="auto"
@@ -86,8 +81,7 @@ export default function Header() {
         textStyle="nav"
         color="#fff"
       >
-        {isMobile ? mobileMenu : null}
-
+        {mobileMenu}
         <Box id="nav-lg">
           <Box
             d="inline"

@@ -37,8 +37,8 @@ export default function Index({ queryRes }) {
                 .url()}
               alt={data.image.alt}
               borderRadius="full"
-              width="310px"
-              height="310px"
+              width="300px"
+              height="300px"
               m="30px"
               mt="0"
               p="15px"

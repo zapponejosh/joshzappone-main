@@ -45,3 +45,11 @@ https://github.com/chakra-ui/chakra-ui/issues/3124
     display: flex;
   }
 }
+@media only screen and (min-width: 450px) {
+  /* #nav-lg {
+    display: none;
+  } */
+  #menu-button-5 {
+    display: none;
+  }
+}
