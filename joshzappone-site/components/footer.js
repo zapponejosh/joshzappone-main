@@ -14,8 +14,23 @@ export default function Footer() {
       <Container>
         <Box textAlign="center">
           <Heading as="h4" size="sm">
-            Made with 🍕 in Seattle.
+            Made with&nbsp;
+            <span role="img" aria-label="pizza">
+              🍕
+            </span>
+            &nbsp; in Seattle.
           </Heading>
+          <div>
+            <p>
+              <span role="img" aria-label="email">
+                📧
+              </span>
+              &nbsp;&nbsp;
+              <a className="external-a" href="mailto:contact@joshzappone.tech">
+                contact@joshzappone.tech
+              </a>
+            </p>
+          </div>
           <div>
             <p>Copyright © 2020</p>
           </div>

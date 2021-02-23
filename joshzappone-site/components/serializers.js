@@ -11,7 +11,29 @@ const BlockRenderer = (props) => {
 
   if (/^h\d/.test(style)) {
     const level = style.replace(/[^\d]/g, '');
-    return <Heading as={`h${level}`}>{props.children}</Heading>;
+    let size = 'sm';
+    switch (level) {
+      case '1':
+        size = '3xl';
+        break;
+      case '2':
+        size = '2xl';
+        break;
+      case '3':
+        size = 'xl';
+        break;
+      case '4':
+        size = 'lg';
+        break;
+
+      default:
+        break;
+    }
+    return (
+      <Heading mt="24px" as={`h${level}`} size={size}>
+        {props.children}
+      </Heading>
+    );
     // React.createElement(
     //   style,
     //   { className: `heading-${level}` },

@@ -36,6 +36,13 @@ const theme = extendTheme({
       letterSpacing: '.8px',
     },
   },
+  styles: {
+    global: {
+      p: {
+        margin: '12px 0',
+      },
+    },
+  },
 });
 
 function MyApp({ Component, pageProps }) {
