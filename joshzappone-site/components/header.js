@@ -60,6 +60,7 @@ const mobileMenu = (
 export default function Header() {
   return (
     <Flex
+      as="nav"
       mx="auto"
       h="100%"
       px={{ base: '.6rem', sm: '1.2rem' }}

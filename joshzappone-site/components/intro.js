@@ -3,6 +3,7 @@ export default function Intro({ title }) {
   return (
     <Flex id="hero" as="section" height="60vh" minH="300px" mb="4rem">
       <Heading
+        as="h1"
         textShadow="3px 2px #d96417"
         fontSize={{ base: '4rem', sm: '6.5rem', md: '8rem', lg: '10rem' }}
         zIndex="1"

@@ -3,7 +3,7 @@ import PostPreview from '../components/post-preview';
 
 export default function MoreStories({ posts }) {
   return (
-    <section>
+    <aside>
       <Heading my={4}>More Stories</Heading>
       <SimpleGrid columns={[1, null, 2]} spacing="40px">
         {posts.map((post) => (
@@ -18,6 +18,6 @@ export default function MoreStories({ posts }) {
           />
         ))}
       </SimpleGrid>
-    </section>
+    </aside>
   );
 }

@@ -13,7 +13,7 @@ export default function CoverImage({ title, url, slug }) {
   );
 
   return (
-    <div className="sm:mx-0">
+    <>
       {slug ? (
         <Link as={`/blog/${slug}`} href="/blog/[slug]">
           <a aria-label={title}>{image}</a>
@@ -21,6 +21,6 @@ export default function CoverImage({ title, url, slug }) {
       ) : (
         image
       )}
-    </div>
+    </>
   );
 }

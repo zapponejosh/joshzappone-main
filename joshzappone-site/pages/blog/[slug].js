@@ -8,8 +8,8 @@ import SectionSeparator from '../../components/section-separator';
 import Layout from '../../components/layout';
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api';
 import PostTitle from '../../components/post-title';
-import Head from 'next/head';
-import { CMS_NAME } from '../../lib/constants';
+
+import { NextSeo } from 'next-seo';
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
@@ -23,13 +23,16 @@ export default function Post({ post, morePosts, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
+            <NextSeo
+              title={post.title}
+              titleTemplate={`${post.title} | Josh Zappone`}
+              // canonical={config.url ? (slug === "/" ? `${config.url}` : `${config.url}/${slug}`) : null}
+              // openGraph={{
+              //   images: { openGraphImages },
+              // }}
+              // noindex={disallowRobots}
+            />
             <article>
-              <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                {/* <meta property="og:image" content={post.ogImage.url} /> */}
-              </Head>
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
