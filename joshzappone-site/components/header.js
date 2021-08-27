@@ -45,14 +45,14 @@ const mobileMenu = (
           Projects
         </Link>
       </MenuItem>
-      <MenuItem
+      {/* <MenuItem
         _active={{ backgroundColor: '#000' }}
         _focus={{ backgroundColor: 'transparent' }}
       >
         <Link w="100%" as={NextLink} href="/blog">
           Blog
         </Link>
-      </MenuItem>
+      </MenuItem> */}
     </MenuList>
   </Menu>
 );
@@ -108,7 +108,7 @@ export default function Header() {
               Projects
             </Link>
           </Box>
-          <Box
+          {/* <Box
             d="inline"
             px="7px"
             _hover={{
@@ -119,7 +119,7 @@ export default function Header() {
             <Link as={NextLink} href="/blog">
               Blog
             </Link>
-          </Box>
+          </Box> */}
         </Box>
       </Flex>
     </Flex>
