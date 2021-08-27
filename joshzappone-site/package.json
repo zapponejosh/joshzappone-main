@@ -21,7 +21,7 @@
     "classnames": "2.2.6",
     "date-fns": "2.10.0",
     "framer-motion": "^3.2.2-rc.1",
-    "next": "latest",
+    "next": "10.0.8",
     "next-seo": "^4.17.0",
     "postcss": "^8.2.4",
     "react": "^16.13.0",
