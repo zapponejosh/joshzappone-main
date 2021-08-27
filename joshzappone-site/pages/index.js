@@ -48,7 +48,7 @@ export default function Index({ queryRes }) {
                   'drop-shadow(10px 4px 4px #6B46C16c) drop-shadow(-11px -2px 4px #d964176c)',
               }}
             />
-            <Box maxW="700px">
+            <Box width="100%" maxW="700px">
               <BlockContent blocks={data.introText} serializers={serializers} />
             </Box>
           </Flex>
