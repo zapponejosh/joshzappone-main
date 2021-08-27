@@ -12,14 +12,12 @@ export default function PostHeader({ title, coverImage, date, author }) {
       <Box mt="1rem">
         <CoverImage title={title} url={coverImage} />
       </Box>
-      <div>
-        <Box mt="1.5rem">
-          <Avatar name={author.name} picture={author.picture} />
-        </Box>
-        <Box fontStyle="italic">
-          <Date dateString={date} />
-        </Box>
-      </div>
+      <Box mt="1.5rem">
+        <Avatar name={author.name} picture={author.picture} />
+      </Box>
+      <Box fontStyle="italic">
+        <Date dateString={date} />
+      </Box>
     </Box>
   );
 }

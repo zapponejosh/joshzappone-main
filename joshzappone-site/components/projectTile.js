@@ -1,4 +1,4 @@
-import { Box, Badge, Image, Text, Button, Flex } from '@chakra-ui/react';
+import { Box, Badge, Image, Button, Flex } from '@chakra-ui/react';
 import BlockContent from '@sanity/block-content-to-react';
 import serializers from './serializers';
 
@@ -50,7 +50,7 @@ const ProjectTile = (props) => {
             </Button>
           ) : null}
 
-          {props.deployLink ? (
+          {props.deployLink && props.deployLink?.externalLink ? (
             <Button
               as="a"
               aria-label="Sponsor Chakra UI on Open Collective"
